@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Potvrzení vymazání filmu{% endblock %}
+
+{% block content %}
+
+    <h3>Potvrzení vymazání filmu</h3>
+   <p>Opravdu chcete odstranit: {{ film.nazev }}?</p>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <input type="submit" value="Ano, smazat.">
+    </form>
+
+
+{% endblock %}

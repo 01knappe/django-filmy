@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Seznam filmů{% endblock %}
+
+{% block content %}
+   <h1>Seznam filmů</h1>
+    {% for film in film_seznam %}
+
+    <div class="row">
+        <div class="col-md-4"><p><img class="sezn" src="{{ film.foto.url }}" alt="{{ film.nazev }}"></p></div>
+        <div class="col-md-8">
+            <h3><a href="{% url 'detail' film.pk %}">{{ film.nazev }}</a></h3>
+            <p><strong>{{ film.zanr }}, {{ film.stat }}, {{ film.rok }}</strong></p>
+            <p>Režie:<strong> {{ film.rezie }}</strong></p>
+            <p>Scénář: <strong> {{ film.scenar }}</strong></p>
+        </div>
+    </div>
+
+    <hr>
+
+    {% endfor %}
+    <p><a href="{% url 'film-create' %}" class="btn btn-success">Nový film</a></p>
+    <p><a href="{% url 'index' %}" class="btn btn-warning">Úvodní stránka</a></p>
+
+{% endblock %}

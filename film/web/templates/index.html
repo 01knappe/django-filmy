@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Úvodní stránka{% endblock %}
+
+{% block content %}
+    <h2>{{ nadpis }}</h2>
+    <p>Film je souhrnné označení pro kinematografii a veškeré její aspekty – umělecké, technické, komerční a společenské. Spolu s tiskem, rozhlasem a televizí a dnes už i internetem patří film mezi komunikační prostředky s největším dosahem a vlivem, společně s televizí bývá řazen mezi tzv. scénická umění. Bývá označován za desátou můzu.</p>
+    <h3>Krátká historie</h3>
+    <p>První filmy promítali bratři Lumièrové v roce 1895, ovšem pouze dokumentární (příjezd lokomotivy na nádraží) a viděli v tom pouhou pouťovou atrakci. Patří jim však zásluha za promítání filmu na plátno pro celý sál plný lidí. Teprve další Francouz, Georges Méliès, naučil film vyprávět příběhy (Cesta na Měsíc, Cesta do neznáma, Dobytí pólu).
+
+Postupně se film stával médiem poměrně oblíbeným, zpočátku zejména žánr grotesky, jehož nejvýznamnějším představitelem byl Charlie Chaplin. V americké vesničce Hollywood, nyní předměstí Los Angeles, byla vybudována filmová studia, která se postupně rozrostla na největší světovou „továrnu na sny“. Časem získal film (původně černobílý a nezvukový, natáčený kamerou s ruční klikou) různé technické vymoženosti. Nejdříve motor, zajišťující rovnoměrné natáčení i promítání, potom také zvuk (v roce 1927 byl natočen první zvukový film prezentovaný v Berlíně – Jazzový zpěvák) a barvu.
+
+Brzy se z filmu stal jeden z nejvýznamnějších uměleckých průmyslů 20. století. Nejlepší filmy (popřípadě herci, režiséři, kameramani, střihači a jiné filmové profese) jsou pravidelně odměňovány cenami, z nichž nejprestižnější je cena Americké filmové akademie Oscar.
+
+Vedle filmů hraných se prosadily i filmy animované, a to jak kreslené, tak loutkové. Ve filmech se uplatňují filmové triky, které tak někdy kombinují hraný a animovaný film. V dnešní době už se ale k vytváření filmových iluzí používají zpravidla počítačové a digitální technologie.
+
+Na přelomu 20. a 21. století se do mezinárodního povědomí dostala nová generace českých filmařů jako jsou například: Jan Svěrák, Vladimír Michálek, Jan Hřebejk, Saša Gedeon, Petr Zelenka, Alice Nellis. Zatím největší úspěch slavil v České republice i ve světě Oscarem oceněný film Kolja (1996) Jana Svěráka. Nominaci na Oscara získaly filmy: Musíme si pomáhat (2000) Jana Hřebejka a Želary (2003) Ondřeje Trojana.
+
+K rozvoji filmu přispěla i televize, která nejen promítá filmy určené původně do kin, ale natáčí i vlastní televizní filmy. Specialitou televizní filmové tvorby jsou televizní seriály.</p>
+
+<a href="{% url 'seznam'%}" class="btn btn-danger">Seznam filmů</a>
+
+{% endblock %}

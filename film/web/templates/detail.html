@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Detail filmu{% endblock %}
+
+{% block content %}
+
+    <h2>{{ film.nazev }}</h2>
+    <div class="row">
+        <div class="col-md-3">
+             {% if film.foto %}
+                <p><img src="{{ film.foto.url }}" alt="{{ film.nazev }}"></p>
+                {% else %}
+                <p><img src="" alt="Foto filmu není k dispozici"></p>
+             {% endif %}
+        </div>
+        <div class="col-md-9">
+            {% if film.zanr%}
+        <p>Žánr: <strong>{{ film.zanr }}</strong></p>
+        {% endif %}
+        <p>Rok vydání: <strong>{{ film.rok }}</strong></p>
+        <p>Země původu:<strong> {{ film.stat }}</strong></p>
+        <p>Režie:<strong> {{ film.rezie }}</strong></p>
+        <p>Scénář:<strong> {{ film.scenar }}</strong></p>
+            <p><a href="{% url 'film-update' film.pk %}" class="btn btn-info">Upravit</a>
+    <a href="{% url 'film-delete' film.pk %}" class="btn btn-danger">Odstranit</a></p>
+
+
+        </div>
+    </div>
+    <h4>Obsah</h4>
+    <p>{{ film.obsah }}</p>
+
+
+    <hr>
+    <p>
+    <a href="{% url 'seznam'%}" class="btn btn-success">Zpět na seznam</a></p>
+
+{% endblock %}
